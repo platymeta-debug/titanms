@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\LoginServer">
+      <UniqueIdentifier>{a35636fd-9cd6-4992-965c-5581c8c57920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataBaseManager">
+      <UniqueIdentifier>{6d14fe3d-2be3-4bed-bb7f-6434dca68a5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Packets">
+      <UniqueIdentifier>{7d1da4bf-dd70-4a09-b9c7-7ed6618dd88d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataBase">
+      <UniqueIdentifier>{8ef50465-5538-494e-a985-720e4bc5d3b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Timer">
+      <UniqueIdentifier>{68156deb-1fbf-44cf-9d2d-8a905914afaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WorldServer">
+      <UniqueIdentifier>{66abe432-d49a-4a7e-9c1f-bc05667f62c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{22676f47-850f-49db-9280-e558fa3801b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AngelScriptEngine">
+      <UniqueIdentifier>{c3daab0b-3db8-49a5-8ea5-00c56413dff6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PacketHandler">
+      <UniqueIdentifier>{d0c688c0-f83e-4983-aa93-f5760e2ad234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameServer">
+      <UniqueIdentifier>{040b91fb-1957-45df-8a19-436be2efff49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RemoteControl">
+      <UniqueIdentifier>{54f1819b-f3b1-4585-97dc-503279cd8a95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameServer">
+      <UniqueIdentifier>{2f10b823-7706-4c37-9674-13dd7bfa77af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Packets">
+      <UniqueIdentifier>{941e637c-49dd-407d-b90e-1a7074e25087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LoginServer">
+      <UniqueIdentifier>{21f36699-c8fe-483a-b0ea-8c48079b2a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataBase">
+      <UniqueIdentifier>{8b04a2e7-f53b-4ae9-ab89-c63851ca3afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Timer">
+      <UniqueIdentifier>{b9d6ba5a-47f5-428a-aea6-ea4efd29a01c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WorldServer">
+      <UniqueIdentifier>{9149632d-a88e-4f79-984f-7ddd5c1d43f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{bee60a1b-9b5b-49b7-9078-dc58c8fc0624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AngelScriptEngine">
+      <UniqueIdentifier>{a65e09e8-b330-4179-96b9-fa80b7661784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataBaseManager">
+      <UniqueIdentifier>{71d354ed-c2c0-414b-870a-b963d7725215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RemoteControl">
+      <UniqueIdentifier>{bdb31968-ec8b-4ff3-b8ef-62c38a2d24d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TitanMS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\LoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters.cpp">
+      <Filter>Source Files\LoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerLogin.cpp">
+      <Filter>Source Files\LoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLM.cpp">
+      <Filter>Source Files\DataBaseManager</Filter>
+    </ClCompile>
+    <ClCompile Include="DropsPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="InventoryPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="MapPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="MobsPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="PvPPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestsPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="ReactorsPackets.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteControlPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="StatsPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="TransportationPacket.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="DataProvider.cpp">
+      <Filter>Source Files\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Initializing.cpp">
+      <Filter>Source Files\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Markup.cpp">
+      <Filter>Source Files\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Source Files\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Source Files\WorldServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Worlds.cpp">
+      <Filter>Source Files\WorldServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketWriter.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AngelScriptEngine.cpp">
+      <Filter>Source Files\AngelScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptstring.cpp">
+      <Filter>Source Files\AngelScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptstring_utils.cpp">
+      <Filter>Source Files\AngelScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="DropsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="InventoryHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="KeysHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="MobsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingHandlingError.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketOutOfRangeError.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="PetsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerLoginHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="ReactorHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="StatsHandler.cpp">
+      <Filter>Source Files\PacketHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Channel.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Channels.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Damage.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Drop.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Equip.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MapDrops.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MapMobs.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MapNPCs.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MapPlayers.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MapReactors.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Maps.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectMoving.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Pet.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PgoLogin.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBuffs.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerInventorys.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerKeys.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerNPC.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerQuests.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Players.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSkills.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStats.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="PvP.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Quests.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Reactor.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Trade.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Transportations.cpp">
+      <Filter>Source Files\GameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteControl.cpp">
+      <Filter>Source Files\RemoteControl</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteControlHandler.cpp">
+      <Filter>Source Files\RemoteControl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AntiCheat.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Buff.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Channel.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Channels.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Damage.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Drop.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Equip.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeMapObject.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapDrops.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapMobs.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapNPCs.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObject.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapPlayers.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapReactors.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectMoving.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Party.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Pet.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PgoLogin.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBuffs.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInventories.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerKeys.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerNPC.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerQuests.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSkills.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PvP.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Quest.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Reactor.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Trade.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Transportations.h">
+      <Filter>Header Files\GameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Handler.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingHandlingError.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketCreator.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketHandlingError.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketOutOfRangeError.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerHandler.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerLoginHandler.h">
+      <Filter>Header Files\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\LoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterEquip.h">
+      <Filter>Header Files\LoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerLogin.h">
+      <Filter>Header Files\LoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="DataProvider.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStruct.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DropData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DropsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Initializing.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemEffectData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemSummonData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapFootholdData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapFootholdsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapMobData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapMobsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapNPCData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapNPCsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapPortalData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapPortalsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapReactorData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapReactorsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MapsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Markup.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MobData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MobsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MobsDropData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MobSummonData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCsScriptsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="PetCommandData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="PetData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="PetsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestRequestData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestRequestsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestRewardData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestRewardsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ReactorData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ReactorScriptsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ReactorsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ReactorsDropData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ReactorStateData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ShopData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ShopItemData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ShopsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillLevelData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillsData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="TopData.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="TopDataStruct.h">
+      <Filter>Header Files\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Run.h">
+      <Filter>Header Files\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header Files\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Header Files\WorldServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Worlds.h">
+      <Filter>Header Files\WorldServer</Filter>
+    </ClInclude>
+    <ClInclude Include="BytesStream.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketReader.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketWriter.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AngelScriptEngine.h">
+      <Filter>Header Files\AngelScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ByteCodeMemory.h">
+      <Filter>Header Files\AngelScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptstring.h">
+      <Filter>Header Files\AngelScriptEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\mysql++.h">
+      <Filter>Header Files\DataBaseManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLM.h">
+      <Filter>Header Files\DataBaseManager</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteControl.h">
+      <Filter>Header Files\RemoteControl</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteControlHandler.h">
+      <Filter>Header Files\RemoteControl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

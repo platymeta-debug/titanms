@@ -1,0 +1,15 @@
+<Server>
+	<IP>192.168.50.37</IP>
+	<Password>pass</Password>
+	<Worlds>1</Worlds>
+	<Channels>4</Channels>
+	<MySQL>
+		<Host>localhost</Host>
+		<Port>3306</Port>
+		<Database>maplestory</Database>
+		<Username>root</Username>
+		<Password>apmsetup</Password>
+	</MySQL>
+	<DefaultNotice>Welcome to Pgo!</DefaultNotice>
+	<EXP>10</EXP>
+</Server>
