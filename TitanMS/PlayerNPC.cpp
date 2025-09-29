@@ -114,7 +114,7 @@ void PlayerNPC::sendGetNumber(int def, int min, int max){
 	text = "";
 }
 
-void PlayerNPC::sendStyle(asIScriptArray* styles){
+void PlayerNPC::sendStyle(CScriptArray* styles){
 	int size = styles->GetElementCount();
 	int style[100];
 	for(int i = 0; i < size; i++ )

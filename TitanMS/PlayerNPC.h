@@ -79,7 +79,7 @@ public:
 	void sendAcceptDecline();
 	void sendGetText();
 	void sendGetNumber(int def, int min, int max);
-	void sendStyle(asIScriptArray* styles);
+	void sendStyle(CScriptArray* styles);
 	bool isQuest(){
 		return isquest;
 	}

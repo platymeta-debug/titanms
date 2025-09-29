@@ -445,13 +445,13 @@ static asCScriptString *StringCopyFactory(const asCScriptString &other)
 
 static void StringDefaultFactory_Generic(asIScriptGeneric *gen)
 {
-	*(asCScriptString**)gen->GetReturnPointer() = StringDefaultFactory();
+	*(asCScriptString**)gen->GetAddressOfReturnValue() = StringDefaultFactory();
 }
 
 static void StringCopyFactory_Generic(asIScriptGeneric *gen)
 {
 	asCScriptString *other = (asCScriptString *)gen->GetArgObject(0);
-	*(asCScriptString**)gen->GetReturnPointer() = StringCopyFactory(*other);
+	*(asCScriptString**)gen->GetAddressOfReturnValue() = StringCopyFactory(*other);
 }
 
 static void StringEqual_Generic(asIScriptGeneric *gen)
@@ -459,7 +459,7 @@ static void StringEqual_Generic(asIScriptGeneric *gen)
 	string *a = (string*)gen->GetArgAddress(0);
 	string *b = (string*)gen->GetArgAddress(1);
 	bool r = *a == *b;
-    *(bool*)gen->GetReturnPointer() = r;
+    *(bool*)gen->GetAddressOfReturnValue() = r;
 }
 
 static void StringNotEqual_Generic(asIScriptGeneric *gen)
@@ -467,7 +467,7 @@ static void StringNotEqual_Generic(asIScriptGeneric *gen)
 	string *a = (string*)gen->GetArgAddress(0);
 	string *b = (string*)gen->GetArgAddress(1);
 	bool r = *a != *b;
-    *(bool*)gen->GetReturnPointer() = r;
+    *(bool*)gen->GetAddressOfReturnValue() = r;
 }
 
 static void StringLesserOrEqual_Generic(asIScriptGeneric *gen)
@@ -475,7 +475,7 @@ static void StringLesserOrEqual_Generic(asIScriptGeneric *gen)
 	string *a = (string*)gen->GetArgAddress(0);
 	string *b = (string*)gen->GetArgAddress(1);
 	bool r = *a <= *b;
-    *(bool*)gen->GetReturnPointer() = r;
+    *(bool*)gen->GetAddressOfReturnValue() = r;
 }
 
 static void StringGreaterOrEqual_Generic(asIScriptGeneric *gen)
@@ -483,7 +483,7 @@ static void StringGreaterOrEqual_Generic(asIScriptGeneric *gen)
 	string *a = (string*)gen->GetArgAddress(0);
 	string *b = (string*)gen->GetArgAddress(1);
 	bool r = *a >= *b;
-    *(bool*)gen->GetReturnPointer() = r;
+    *(bool*)gen->GetAddressOfReturnValue() = r;
 }
 
 static void StringLesser_Generic(asIScriptGeneric *gen)
@@ -491,7 +491,7 @@ static void StringLesser_Generic(asIScriptGeneric *gen)
 	string *a = (string*)gen->GetArgAddress(0);
 	string *b = (string*)gen->GetArgAddress(1);
 	bool r = *a < *b;
-    *(bool*)gen->GetReturnPointer() = r;
+    *(bool*)gen->GetAddressOfReturnValue() = r;
 }
 
 static void StringGreater_Generic(asIScriptGeneric *gen)
@@ -499,7 +499,7 @@ static void StringGreater_Generic(asIScriptGeneric *gen)
 	string *a = (string*)gen->GetArgAddress(0);
 	string *b = (string*)gen->GetArgAddress(1);
 	bool r = *a > *b;
-    *(bool*)gen->GetReturnPointer() = r;
+    *(bool*)gen->GetAddressOfReturnValue() = r;
 }
 
 static void StringLength_Generic(asIScriptGeneric *gen)

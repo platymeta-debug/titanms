@@ -25,6 +25,9 @@
 #include "Tools.h"
 #include <sstream>
 #include "ByteCodeMemory.h"
+#include "../src/TitanMS/ASCompat.h"
+#include <scriptarray.h>
+#include <scriptstdstring.h>
 #include "NPCsScriptsData.h"
 #include "PortalsData.h"
 #include "ReactorScriptsData.h"
@@ -38,6 +41,7 @@
 using namespace Tools;
 
 asIScriptEngine* AngelScriptEngine::pScriptEngine;
+asIScriptEngine* g_ScriptEngine = NULL;
 
 
 const int tr=1;
@@ -68,9 +72,13 @@ int AngelScriptEngine::Initialize(){
 	pScriptEngine = asCreateScriptEngine(ANGELSCRIPT_VERSION);
 	if( pScriptEngine == NULL )	return 0; 
 
+	g_ScriptEngine = pScriptEngine;
+
 	int r;
 
 	RegisterScriptString(pScriptEngine);
+	RegisterStdString(g_ScriptEngine);
+	RegisterScriptArray(g_ScriptEngine, true);
 	// Defenitions
 	
 	pScriptEngine->RegisterGlobalProperty("const int YES", (void*)&tr);
@@ -374,13 +382,14 @@ int AngelScriptEngine::LoadScript(asIScriptEngine * pScriptEngine, const char *f
 		return -1;
 	}
 
-	int nRet = pScriptEngine->AddScriptSection(module, filename, code.c_str(), len, 0);
-	if( nRet < 0 ) 
+	bool ok = AS_COMPAT_AddScriptSection(pScriptEngine,module, filename, code.c_str(), len, 0);
+	if( !ok )
 	{
 		printf("An error occured while adding the script section.\n");
-	} 
+		return -1;
+	}
 
-	return nRet;
+	return 0;
 }
 
 ByteCodeMemory<string>* AngelScriptEngine::loadPortal(string id){
@@ -389,7 +398,7 @@ ByteCodeMemory<string>* AngelScriptEngine::loadPortal(string id){
 	if (LoadScript( pScriptEngine, name, name) < 0){
 		return 0; 
 	}
-	int d = pScriptEngine->Build( name );
+	int d = AS_COMPAT_Build(pScriptEngine, name );
 	if( d < 0 )
 	{
 		printf("Failed to compile script: %s \n", name);
@@ -397,7 +406,7 @@ ByteCodeMemory<string>* AngelScriptEngine::loadPortal(string id){
 	}
 	
 	ByteCodeMemory<string>* st = new ByteCodeMemory<string>(id, name);
-	pScriptEngine->SaveByteCode(name, st);
+	AS_COMPAT_SaveByteCode(pScriptEngine,name, st);
 	PortalsData::getInstance()->add(st);
 	return st;
 }
@@ -408,7 +417,7 @@ ByteCodeMemory<int>* AngelScriptEngine::loadReactor(int id){
 	if (LoadScript( pScriptEngine, name, name) < 0){
 		return 0; 
 	}
-	int d = pScriptEngine->Build( name );
+	int d = AS_COMPAT_Build(pScriptEngine, name );
 	if( d < 0 )
 	{
 		printf("Failed to compile script: %s \n", name);
@@ -416,7 +425,7 @@ ByteCodeMemory<int>* AngelScriptEngine::loadReactor(int id){
 	}
 	
 	ByteCodeMemory<int>* st = new ByteCodeMemory<int>(id, name);
-	pScriptEngine->SaveByteCode(name, st);
+	AS_COMPAT_SaveByteCode(pScriptEngine,name, st);
 	ReactorScriptsData::getInstance()->add(st);
 	return st;
 }
@@ -426,7 +435,7 @@ ByteCodeMemory<int>* AngelScriptEngine::loadNPC(int id){
 	if (LoadScript( pScriptEngine, name, name) < 0){
 		return 0; 
 	}
-	int d = pScriptEngine->Build( name );
+	int d = AS_COMPAT_Build(pScriptEngine, name );
 	if( d < 0 )
 	{
 		printf("Failed to compile script: %s \n", name);
@@ -434,7 +443,7 @@ ByteCodeMemory<int>* AngelScriptEngine::loadNPC(int id){
 	}
 	
 	ByteCodeMemory<int>* st = new ByteCodeMemory<int>(id, name);
-	pScriptEngine->SaveByteCode(name, st);
+	AS_COMPAT_SaveByteCode(pScriptEngine,name, st);
 	NPCsScriptsData::getInstance()->add(st);
 	return st;
 }
@@ -444,7 +453,7 @@ int AngelScriptEngine::handleReactor(Player* player, Reactor* reactor){
 	if(st == NULL)
 		return 0;
 	st->resetReadPos();
-	pScriptEngine->LoadByteCode(st->getName(), st);
+	AS_COMPAT_LoadByteCode(pScriptEngine,st->getName(), st);
 
 	asIScriptContext * pContext = pScriptEngine->CreateContext();
 	if( pContext == 0 ) 
@@ -453,9 +462,9 @@ int AngelScriptEngine::handleReactor(Player* player, Reactor* reactor){
 		pScriptEngine->Release();
 		return 0;
 	}
-	int nFunctionID = -1;
-	nFunctionID = pScriptEngine->GetFunctionIDByName(st->getName(), "reactor_main");
-	if(nFunctionID < 0){
+	asIScriptFunction* nFunctionID = NULL;
+	nFunctionID = AS_COMPAT_GetFunctionByName(pScriptEngine,st->getName(), "reactor_main");
+	if(nFunctionID == NULL){
 		return 0;
 	}
 	pContext->Prepare( nFunctionID );
@@ -475,7 +484,7 @@ int AngelScriptEngine::handlePortal(Player* player, MapPortalData* portal){
 	if(st == NULL)
 		return 0;
 	st->resetReadPos();
-	pScriptEngine->LoadByteCode(st->getName(), st);
+	AS_COMPAT_LoadByteCode(pScriptEngine,st->getName(), st);
 
 	asIScriptContext * pContext = pScriptEngine->CreateContext();
 	if( pContext == 0 ) 
@@ -484,8 +493,8 @@ int AngelScriptEngine::handlePortal(Player* player, MapPortalData* portal){
 		pScriptEngine->Release();
 		return 0;
 	}
-	int nFunctionID = pScriptEngine->GetFunctionIDByName(st->getName(), "portal_main");
-	if(nFunctionID < 0){
+	asIScriptFunction* nFunctionID = AS_COMPAT_GetFunctionByName(pScriptEngine,st->getName(), "portal_main");
+	if(nFunctionID == NULL){
 		return 0;
 	}
 	pContext->Prepare( nFunctionID );
@@ -504,7 +513,7 @@ int AngelScriptEngine::handleNPC(PlayerNPC* npc){
 	if(st == NULL)
 		return 0;
 	st->resetReadPos();
-	pScriptEngine->LoadByteCode(st->getName(), st);
+	AS_COMPAT_LoadByteCode(pScriptEngine,st->getName(), st);
 
 	asIScriptContext * pContext = pScriptEngine->CreateContext();
 	if( pContext == 0 ) 
@@ -513,17 +522,17 @@ int AngelScriptEngine::handleNPC(PlayerNPC* npc){
 		pScriptEngine->Release();
 		return 0;
 	}
-	int nFunctionID = -1;
+	asIScriptFunction* nFunctionID = NULL;
 	if(npc->isQuest()){ 
 		// TODO:
 		//
-		//	nFunctionID = pScriptEngine->GetFunctionIDByName(st->getName(), "end_quest_main");
+		//	nFunctionID = AS_COMPAT_GetFunctionByName(pScriptEngine,st->getName(), "end_quest_main");
 		//else
-			nFunctionID = pScriptEngine->GetFunctionIDByName(st->getName(), "start_quest_main");
+			nFunctionID = AS_COMPAT_GetFunctionByName(pScriptEngine,st->getName(), "start_quest_main");
 	}
 	else
-		nFunctionID = pScriptEngine->GetFunctionIDByName(st->getName(), "npc_main");
-	if(nFunctionID < 0){
+		nFunctionID = AS_COMPAT_GetFunctionByName(pScriptEngine,st->getName(), "npc_main");
+	if(nFunctionID == NULL){
 		return 0;
 	}
 	pContext->Prepare( nFunctionID );
